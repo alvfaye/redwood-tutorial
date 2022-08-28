@@ -9,11 +9,10 @@ describe('CommentsCell', () => {
     }).not.toThrow()
   })
 
-  it('renders Empty successfully', async () => {
-    expect(() => {
-      render(<Empty />)
-    }).not.toThrow()
-  })
+it('renders Empty successfully', async () => {
+  render(<Empty />)
+  expect(screen.getByText('No comments yet')).toBeInTheDocument()
+})
 
   it('renders Failure successfully', async () => {
     expect(() => {
